@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(171, 211, 245);
+}
+
+h1 {
+    font-size: 250%;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-style: groove;
+    border-radius: 5%;
+    border-width: .2em;
+}
+
+.container {
+    background-color: rgb(255, 180, 172);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center; 
+    margin: 100px;
+    padding: 50px;
+    border-radius: 5%;
+}
+
+.questions {
+    font-weight: bolder;
+    font-size: 1.50em;
+    padding: 5px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#amount {
+    font-size: larger;
+    border-radius: 5%;
+    border-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#rating {
+    font-size: larger;
+    border-radius: 5%;
+    border-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#people {
+    font-size: larger;
+    border-radius: 5%;
+    border-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+button {
+    font-weight: bold;
+    font-size: 2.5em;
+    border-radius: 5%;
+    border-style: groove;
+    border-width: .2em;
+    background-color: rgb(140, 221, 175);
+    font-family: 'Montserrat', sans-serif;
+}

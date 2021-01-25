@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tip Calculator</h1>
+
+        <div class="questions">
+            How much was your bill?
+        </div>
+        <!-- <span>$</span>  -->
+        <input type="text" placeholder="Bill Amount" id="amount">
+        <div class="questions">
+            How was your service?
+        </div>
+        <select name="rating" id="rating">
+            <option value="blank">--Choose an Option--</option>
+            <option value="Great">Great</option>
+            <option value="Okay">Okay</option>
+            <option value="Poor">Poor</option>
+        </select>
+        <div class="questions">
+            How many people are sharing the bill?
+        </div>   
+        <input type="text" placeholder="Number of People" id="people">
+        <!-- <span>people</span> -->
+
+        <div class="calButton">
+        <button id="calculate" onclick="calculate()">Calculate Tip!</button>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
