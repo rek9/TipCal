@@ -19,24 +19,39 @@
         </div>
         <!-- <span>$</span>  -->
         <input type="text" placeholder="Bill Amount" id="amount">
+        
+        <div class="questions">
+            Tip Percentage:
+        </div>
+
+        <div class="slidercontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="range">
+        </div>
+        <span id="value"></span>
+        <span id="outputVar">%</span>
+
         <div class="questions">
             How was your service?
         </div>
+
         <select name="rating" id="rating">
             <option value="blank">--Choose an Option--</option>
             <option value="Great">Great</option>
             <option value="Okay">Okay</option>
             <option value="Poor">Poor</option>
         </select>
+
         <div class="questions">
             How many people are sharing the bill?
         </div>   
+
         <input type="text" placeholder="Number of People" id="people">
         <!-- <span>people</span> -->
 
         <div class="calButton">
         <button id="calculate" onclick="calculate()">Calculate Tip!</button>
         </div>
+
     </div>
 
 </body>

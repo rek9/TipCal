@@ -22,18 +22,21 @@ function getPeople() {
     console.log(people);
 }
 
+var slider = document.getElementById("range");
+  var output = document.getElementById("value");
+  var outputVar = document.getElementById("outputVar");
+
+  let update = () => output.innerHTML = slider.value;
+
+  slider.addEventListener('input', update);
+  update();
+
+
 function calculate() {
     getBill();
     getRating();
     getPeople();
-
-    if (people <= 3) {
-        let tip = 0.20 * Number(userBill);
-        tip = tip.toFixed(2);
-        alert("$" + tip + " tip!");
-    } else if (people > 3) {
-        let tip = 0.25 * Number(userBill);
-        tip = tip.toFixed(2);
-        alert("$" + tip + " tip!")
-    }
+    let tip = (output.innerHTML / 100) * Number(userBill);
+    tip = tip.toFixed(2);
+    alert("$" + tip + " tip!");
 }
