@@ -1,63 +1,88 @@
+
+/* Large Container Styles */
+
 body {
-    background-color: rgb(171, 211, 245);
+    background-image:url(hdbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.671);
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 h1 {
     font-size: 250%;
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    border-style: groove;
+    border-style: solid;
     border-radius: 5%;
-    border-width: .2em;
+    border-width: .05em;
+    padding: 10px;
 }
 
 .container {
-    background-color: rgb(255, 180, 172);
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center; 
-    margin: 100px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     padding: 50px;
     border-radius: 5%;
+ /* flex-direction: column; */
+    /* justify-content:center; */
+    /* align-items:center;  */
 }
 
 .questions {
     font-weight: bolder;
     font-size: 1.50em;
     padding: 5px;
-    font-family: 'Dosis', sans-serif;
+    
 }
-/* Slider Properties */
-.slidercontainer {
+
+
+/* Slider Styles (Disabled)*/
+
+/* .slidercontainer {
     width: auto;
 }
 
 .slider {
     width: 100%;
+} */
+
+/* Text Box Styles */
+
+.textBox {
+    padding: 3px;
+    margin: 10px;
 }
 
-
+#restaurant {
+    font-size: larger;
+    border: 1px black solid;
+    border-radius: 5%;
+    font-family: 'IBM Plex Mono', monospace;
+}
 
 #amount {
     font-size: larger;
+    border: 1px black solid;
     border-radius: 5%;
-    border-style: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 #rating {
     font-size: larger;
     border-radius: 5%;
-    border-style: none;
-    font-family: 'Montserrat', sans-serif;
+    border: 1px black solid;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-#people {
+#comment {
     font-size: larger;
     border-radius: 5%;
-    border-style: none;
-    font-family: 'Montserrat', sans-serif;
+    border: 1px black solid;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .calButton {
@@ -66,12 +91,82 @@ h1 {
     padding-top: 2em;
 }
 
-button {
+#calculate {
     font-weight: bold;
     font-size: 2.5em;
     border-radius: 5%;
     border-style: groove;
     border-width: .2em;
-    background-color: rgb(140, 221, 175);
-    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+   
+}
+
+
+/* Modal Styling */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    height: 500px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .Title {
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 75px;
+
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
