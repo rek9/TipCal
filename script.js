@@ -1,7 +1,16 @@
+
+
+let restaurant;
 let userBill;
 let rating;
 let comment;
 
+//Get restaurant name
+
+function getRestaurant() {
+    restaurant = document.getElementById('restaurant').value;
+    console.log(restaurant);
+}
 //Get Bill Amount from input
 
 function getBill() {
@@ -41,6 +50,7 @@ function getComment() {
 //Calculate tip based on Bill Amount and inject into modal.
 
 function calculate() {
+    getRestaurant()
     getBill();
     getRating();
     getComment();
